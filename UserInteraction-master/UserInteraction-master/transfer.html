@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css">
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$('#submit').on('click',function(){
+			$('#dialog-success').dialog({
+				buttons : {
+					"OK": function (){
+						window.location.href='details.html';
+					}
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<header>
+		<div class="header_container">
+			<p class="logo">
+				<a href="home.html">One Bank</a>
+			</p>
+			<nav>
+				<a href="home.html">Home</a> 
+				<a href="">Profile</a>
+				<a href="login.html">Logout</a>
+			</nav>
+		</div>
+	</header>
+
+	<div class="body">
+		<div class="flex_container_column">
+			<div class="box_900 top_margin flex_container_column">
+				<div class="details_header_row flex_container_row">
+					<div class="details_header_row_item_selected">
+						<a href="transfer.html" class="flex_container_column">Transfer</a>
+					</div>
+					<div class="details_header_row_item">Payment</div>
+					<div class="details_header_row_item">History</div>
+				</div>
+				<div class="transfer_body bottom_margin">
+					<div class="form_body">
+						<form id="transfer" name="transfer">
+						<div class="form_row bottom_margin">
+							<p>Bank name</p>
+							<select class="input_dropdown">
+								<option></option>
+								<option>Bank of America</option>
+								<option>Citi bank</option>
+								<option>Chase bank</option>
+							</select>
+						</div>
+						<div class="form_row bottom_margin">
+							<p>Account number</p>
+							<input type="text" class="input_textbox" />
+						</div>
+						<div class="form_row bottom_margin">
+							<p>Amount</p>
+							<input type="text" class="input_textbox" />
+						</div>	
+						<div class="form_row_buttons flex_container_row bottom_margin">
+							<span id="reset" class="submit_button" onclick="document.getElementById('transfer').reset();">Reset</span>
+							<span id="submit" class="submit_button">Transfer</span>
+						</div>		
+						</form>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dialog-success" title="Successful operation" style="display: none;">
+  		<p><br>Transfer was successful. If you wish to download the receipt, please click on the link below.</p>
+  		<br>
+  		<div class="print_receipt flex_container_row">
+  			<img src= "img/pdf.png"/>
+  			<a href="" class="link">Print the receipt!</a>
+		</div>
+	</div>
+</body>
+</html>

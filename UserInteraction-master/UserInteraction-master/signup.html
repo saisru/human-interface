@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Signup</title>
+<link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+	<header>
+		<div class="header_container">
+			<p class="logo">
+				<a href="home.html">One Bank</a>
+			</p>
+			<nav>
+				<a href="login.html">Login</a>
+			</nav>
+		</div>
+	</header>
+
+	<div class="body">
+		<div class="flex_container_column">
+			<div class="box_400 top_margin flex_container_column">
+				<div class="form_header_row">
+					<h3>Signup</h3>
+				</div>
+				<form name="signupForm" id="signupForm">
+					<div class="form_body">
+						<div class="form_row bottom_margin">
+							<p>Email</p>
+							<input type="text" class="input_textbox" />
+						</div>
+						<div class="form_row bottom_margin">
+							<p>Password</p>
+							<input type="password" class="input_textbox" />
+						</div>
+						<div class="form_row bottom_margin">
+							<p>Re-enter password</p>
+							<input type="password" class="input_textbox" />
+						</div>
+						<div class="form_row bottom_margin">
+							<p>First name</p>
+							<input type="text" class="input_textbox" />
+						</div>
+						<div class="form_row bottom_margin">
+							<p>Last name</p>
+							<input type="text" class="input_textbox" />
+						</div>
+						<div class="form_row_buttons flex_container_row bottom_margin">
+							<span id="reset" class="submit_button" onclick="document.getElementById('signupForm').reset();">Reset</span>
+							<span id="submit" class="submit_button" onclick="window.location='home.html'">Submit</span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
